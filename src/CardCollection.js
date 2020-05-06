@@ -8,13 +8,12 @@ class CardCollection extends Component {
         <div className="card-collection">
             all cards
             {
-            this.props.cards.map(card => {
-              return <CharacCard key={card.id} card={card} 
-              addToDeck={this.props.addToDeck}
-            />
-            })
-          }
-
+                this.props.cards.map(card => {
+                return <CharacCard key={card.id} card={card} 
+                addToDeck={this.props.addToDeck}
+                />
+                })
+            }
         </div>
     )
     }

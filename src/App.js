@@ -26,18 +26,23 @@ class App extends Component {
     })
   }
 
+  // remove a card from a deck
+  removeDeck = (card) => {
+    let newDeck = this.state.decks.filter(charac => charac !== card)
+    this.setState({decks:newDeck})
+  }
   //display all cards
   componentDidMount(){
     fetch('http://localhost:3000/images')
     .then(response => response.json())
-    .then(images => this.setState({images}))
+    .then(images => this.setState({cards:images}))
   }
 
   render(){
     return(
       <main>
         <h1>LOR Gallery</h1>
-        <DeckContainer deck={this.state.decks} />
+        <DeckContainer decks={this.state.decks} removeDeck={this.removeDeck}/>
         <CardCollection cards={this.state.cards} addToDeck={this.addToDeck}/>
       </main>
     )

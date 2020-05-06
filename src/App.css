@@ -1,3 +1,12 @@
-.image {
-  max-width: 10%;
+.card-collection {
+  width: 100%;
+}
+
+.card {
+  width: 30%;
+  height: 30%;
+}
+
+.image > img {
+  width: 100%;
 }
