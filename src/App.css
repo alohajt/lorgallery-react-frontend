@@ -1,12 +1,24 @@
 .card-collection {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 30%;
   height: 30%;
+  margin: 0;
 }
 
 .image > img {
   width: 100%;
+}
+
+.deck-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.deck-status {
+  justify-content: space-around;
 }

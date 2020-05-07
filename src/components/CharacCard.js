@@ -2,11 +2,12 @@ import React from "react";
 
 const CharacCard = (props) => {
 
-    const {card, addToDeck, removeDeck} = props
+    const {card, addToDeck, removeDeck, isUnitOrSpell} = props
 
     function handleClick(){
       if (addToDeck){
         addToDeck(card)
+        isUnitOrSpell(card)
       } else {
         removeDeck(card)
       }
