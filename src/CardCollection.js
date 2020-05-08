@@ -3,13 +3,10 @@ import CharacCard from './components/CharacCard'
 
 class CardCollection extends Component {
 
-    
-
-
     render() {
         return (
         <div>
-        <h2>all cards</h2>    
+        <h2>All Cards</h2>    
         <div className="card-collection">
             
             {

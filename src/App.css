@@ -1,24 +1,116 @@
+html {
+  background-image: url("https://i.redd.it/9ulemfku64t31.jpg");
+  /* display: flex;
+  flex-wrap: nowrap; */
+}
+
+h1 {
+  margin: 10px 0;
+  justify-content: center;
+}
+h2 {
+  margin: 10px 0;
+}
+
+.left-side {
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+}
+
 .card-collection {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  height: 100vh;
+  overflow:scroll;
+}
+.card-collection::-webkit-scrollbar {
+  /* display: none;  */
+  background-color:transparent;
 }
 
 .card {
-  width: 30%;
-  height: 30%;
-  margin: 0;
+  margin: 10px;
+}
+img:hover {
+  /* opacity: 0.9; */
+  transform: scale(1.2); 
+  transition: all 0.15s ease 0s;  
 }
 
-.image > img {
-  width: 100%;
+/* ????? */
+
+img {
+  width: 100px;
+  margin: 2px;
+  padding: 0%;
 }
+/* .image > img {
+
+} */
 
 .deck-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
+.deck-staus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+.my-deck {
   display: flex;
   flex-wrap: wrap;
+}
+
+.my-deck > img {
+
 }
 
 .deck-status {
   justify-content: space-around;
 }
+
+/* DropdownBar */
+.dropdown{
+  line-height:40px;
+  text-align: center;
+  justify-content: center;
+
+  width: 200px;
+  text-align: center;
+  /* position: relative;
+  display: inline-block;    */
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 1;
+  color: wheat;
+}
+
+.dropdown-content {
+  background-image: url("https://www.pcgamesn.com/wp-content/uploads/2019/10/legends-of-runeterra-explained-900x506.jpg");
+  text-align: center;
+  display: none;
+  min-width: 160px;
+  float:right;
+
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+  align-items: center;
+  border-radius: 10px;
+  height: 700px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
+/* dropdown Bar ends */
