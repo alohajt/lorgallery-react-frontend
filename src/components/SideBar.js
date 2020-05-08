@@ -1,7 +1,7 @@
-mport React from "react";
+import React from "react";
 import Sidebar from "react-sidebar";
 
-class App extends React.Component {
+class SideBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,4 +30,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default SideBar;

@@ -2,7 +2,7 @@ import React from "react";
 
 const CharacCard = (props) => {
 
-    const {card, addToDeck, removeDeck, isUnitOrSpell} = props
+    const {card, addToDeck, removeDeck, isUnitOrSpell, removeUnitOrSpell} = props
 
     function handleClick(){
       if (addToDeck){
@@ -10,6 +10,8 @@ const CharacCard = (props) => {
         isUnitOrSpell(card)
       } else {
         removeDeck(card)
+        removeUnitOrSpell(card)
+
       }
     }
 
@@ -19,9 +21,9 @@ const CharacCard = (props) => {
       key={props.card.id}
       onClick={handleClick}
       >
-        <div className="image">
-          <img alt="oh no!" src={props.card.url} />
-        </div>
+
+          <img className="image" alt="oh no!" src={props.card.url} />
+
       </div>
     )
 
